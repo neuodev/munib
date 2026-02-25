@@ -13,7 +13,7 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-.hero__section div{ 
+.hero__section > .container__hero{ 
   background: url("/assets/Hero.jpg");
   background-size: cover;
   background-position: center;
@@ -24,19 +24,19 @@ body {
 
 .hero__highlight{
   position: relative;  
-  width: 200px;
+  width: fit-content;
   z-index: 1;
 }
 .hero__highlight::after{
     content: "";
+    position: absolute;
     z-index: -1;
     background-color: #0db59d;
     border-radius: 10px 17px 10px 0;
-    width: 180px;
+    width: fit-content;
     height: 50px;
-    padding: 30px 40px;
+    padding: 20px 100px;
     display: flex;
-    position: absolute;
     top: 5px;
     left: -12px;
     transform: translate(-50%, -50%);
