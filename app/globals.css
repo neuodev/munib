@@ -1,26 +1,44 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #ffffff;
+  --color-main: #0D5466;
+  --color-second: #129786;
+  --color-third: #0DB59D;
+  --color-gtext: #4B4B4B;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*{
+    direction: rtl;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
+
+.hero__section div{ 
+  background: url("/assets/Hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+.hero__highlight{
+  position: relative;  
+  width: 200px;
+  z-index: 1;
+}
+.hero__highlight::after{
+    content: "";
+    z-index: -1;
+    background-color: #0db59d;
+    border-radius: 10px 17px 10px 0;
+    width: 180px;
+    height: 50px;
+    padding: 30px 40px;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: -12px;
+    transform: translate(-50%, -50%);
+    transform: rotate(-4deg);
+} 
