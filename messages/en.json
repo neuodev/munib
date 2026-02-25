@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "why": "Why Us",
+    "reviews": "Reviews",
+    "plans": "Plans",
+    "faq": "FAQ",
+    "contact": "Contact Us",
+    "language": "English"
+  },
+  "hero": {
+    "title": "Make the Quran the spring of your heart with",
+    "highlight": "Munib",
+    "description": "Join thousands of students who started their journey with us. Specialized teachers, innovative curricula, and personal follow-up",
+    "contactBtn": "Contact Us",
+    "plansBtn": "Browse Plans"
+  }
+}

@@ -1,18 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import {useTranslations} from 'next-intl';
 
 const Hero = () => {
+    const t = useTranslations('hero');
+    
     return (
         <section className="hero__section bg-main">
-            <div className="h-[calc(100vh-100px)] w-full bg-main scroll-pt-12.5 flex justify-center items-center flex-col ">
-                <h1 className="font-bold text-white text-center text-5xl w-100 leading-15">اجعل القرآن ربيع قلبك مع 
-                    <span className="hero__highlight"> مُنيــــب </span>
+            <div className="min-h-[calc(100vh-100px)] w-full bg-main flex justify-center items-center flex-col px-4 py-8">
+                <h1 className="font-bold text-white text-center text-3xl md:text-4xl lg:text-5xl max-w-110 leading-tight md:leading-relaxed">
+                    {t('title')} <span className="hero__highlight">{t('highlight')}</span>
                 </h1>
-                <Image src={"/assets/Line-Hero.svg"} alt="Title line" height={320} width={320} className="mt-5"></Image>
-                <p className="text-white font-bold w-[400] text-center ">انضم إلى آلاف الطلاب الذين بدأوا رحلتهم معنا. معلمين متخصصين، ومناهج مبتكرة، ومتابعة شخصية</p>
-                <div className="btns flex gap-2 mt-2 ">
-                    <Link href={"#"} className="bg-white hover:bg-third  transition-all px-6 py-3 text-main font-bold rounded">تواصل معنا</Link>
-                    <Link href={"#"} className=" text-white px-5 py-3 font-bold rounded">تصفح خططنا</Link>
+                <Image src="/assets/Line-Hero.svg" alt="Title line" height={200} width={200} className="mt-5 md:w-[320px]" />
+                <p className="text-white font-bold max-w-[400px] md:max-w-[400px] text-center text-sm md:text-base mt-4">{t('description')}</p>
+                <div className="btns flex flex-col md:flex-row gap-3 md:gap-4 mt-6 w-full md:w-auto">
+                    <Link href="#" className="bg-white hover:bg-third transition-all px-6 py-3 text-main font-bold rounded text-center">{t('contactBtn')}</Link>
+                    <Link href="#" className="border-2 border-white text-white hover:bg-white hover:text-main transition-all px-6 py-3 font-bold rounded text-center">{t('plansBtn')}</Link>
                 </div>
             </div>
         </section>
