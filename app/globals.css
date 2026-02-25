@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
 }
 
-
+/* Components */
 .hero__highlight{
   position: relative;  
   width: fit-content;
@@ -31,14 +31,48 @@ body {
     content: "";
     position: absolute;
     z-index: -1;
-    background-color: #0db59d;
+    background-color: #0db59d;  
     border-radius: 10px 17px 10px 0;
     width: fit-content;
     height: 50px;
-    padding: 20px 100px;
+    padding: 20px 90px;
     display: flex;
     top: 5px;
     left: -12px;
     transform: translate(-50%, -50%);
     transform: rotate(-4deg);
 } 
+
+.title__white{
+  color:white;
+}
+.title{
+  color:var(--color-main);
+}
+.title,
+.title__white{
+  font-size: xxx-large;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin: 50px auto;
+  width: fit-content;
+}
+.title::after{
+  content: "";
+  overflow: visible;
+  background: url("/assets/Title-line.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 220px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+svg{
+  fill: red;
+}
