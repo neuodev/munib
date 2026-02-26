@@ -1,5 +1,7 @@
+import Feedback from "./components/Feedback";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Plans from "./components/Plans";
 import VideoSection from "./components/VideoSection";
 import Whyus from "./components/Whyus";
 
@@ -10,6 +12,8 @@ export default function Home() {
    <Hero/>
    <Whyus/>
    <VideoSection/>
+   <Feedback/>
+   <Plans/>
     </>
   );
 }

@@ -10,7 +10,6 @@ const Navbar = () => {
     const router = useRouter();
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleLanguage = () => {
         const newLocale = locale === 'ar' ? 'en' : 'ar';
         const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);

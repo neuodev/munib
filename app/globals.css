@@ -45,9 +45,12 @@ body {
 
 .title__white{
   color:white;
+  margin: 20px auto;
 }
 .title{
   color:var(--color-main);
+    margin: 50px auto;
+
 }
 .title,
 .title__white{
@@ -55,7 +58,6 @@ body {
   font-weight: bold;
   text-align: center;
   position: relative;
-  margin: 50px auto;
   width: fit-content;
 }
 .title::after{
@@ -73,6 +75,3 @@ body {
   left: 50%;
   transform: translateX(-50%);
 } 
-svg{
-  fill: red;
-}
