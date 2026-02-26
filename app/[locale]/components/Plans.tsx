@@ -88,7 +88,7 @@ return (
             {plan.features.map((feature) => (
                 <li
                 key={feature}
-                className={`flex ${locale === 'ar' ? 'flex-row-reverse' : 'flex-row'} items-center gap-3 ${locale === 'ar' ? 'text-right' : 'text-left'} text-[15px] font-medium`}
+                className={`flex flex-row-reverse items-center gap-3 ${locale === 'ar' ? 'text-right' : 'text-left'} text-[15px] font-medium`}
                 style={{ color: plan.featured ? "#fff" : "#333" }}
                 >
                     <span>{feature}</span>

@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import {useTranslations, useLocale} from 'next-intl';
 import {useRouter, usePathname} from 'next/navigation';
-import {useState} from 'react';
+import {useState, useEffect} from 'react'; // أضف useEffect هنا
+import Link from 'next/link';
 
 const Navbar = () => {
     const t = useTranslations('nav');
@@ -10,30 +11,76 @@ const Navbar = () => {
     const router = useRouter();
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
+
+    // ✅ Intersection Observer - يتتبع الـ section الظاهرة تلقائياً
+    useEffect(() => {
+        const sections = ['home', 'why', 'reviews', 'plans', 'faq', 'contact'];
+        const observers: IntersectionObserver[] = [];
+
+        sections.forEach((id) => {
+            const element = document.getElementById(id);
+            if (!element) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(id);
+                    }
+                },
+                { threshold: 0.4 } // لما 40% من الـ section تبان → يتفعل
+            );
+
+            observer.observe(element);
+            observers.push(observer);
+        });
+
+        return () => observers.forEach((obs) => obs.disconnect());
+    }, []);
+
     const toggleLanguage = () => {
         const newLocale = locale === 'ar' ? 'en' : 'ar';
         const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
         router.push(newPath);
     };
 
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsOpen(false);
+            // مش محتاج تضبط activeSection هنا، الـ Observer هيعملها تلقائياً
+        }
+    };
+
     return (
-       <nav className="nav__bar bg-background shadow-xl flex justify-center items-center py-4 fixed w-full z-30 ">
+       <nav className="nav__bar bg-background shadow-xl flex justify-center items-center py-4 sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-4">
-            <Image src="/assets/Munib_BG_White.svg" alt="Logo" width={150} height={150} className="md:w-50" />
+            <Link href={`/${locale}`}>
+              <Image src="/assets/Munib_BG_White.svg" alt="Logo" width={150} height={150} className="md:w-[200px] cursor-pointer" />
+            </Link>
             
-            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-main">
+            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-main cursor-pointer">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
               </svg>
             </button>
 
             <ul className={`${isOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute md:relative top-20 md:top-0 left-0 right-0 bg-background md:bg-transparent gap-4 md:gap-6 p-4 md:p-0 shadow-lg md:shadow-none z-50`}>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('home')}</a></li>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('why')}</a></li>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('reviews')}</a></li>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('plans')}</a></li>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('faq')}</a></li>
-              <li><a href="#" className="text-main hover:text-second font-bold block">{t('contact')}</a></li>
+              {['home', 'why', 'reviews', 'plans', 'faq', 'contact'].map((section) => (
+                <li key={section}>
+                  <button
+                    onClick={() => scrollToSection(section)}
+                    className={`font-bold block cursor-pointer transition-colors ${
+                      activeSection === section
+                        ? 'text-second'          // ✅ Active
+                        : 'text-main hover:text-second'
+                    }`}
+                  >
+                    {t(section)}
+                  </button>
+                </li>
+              ))}
             </ul>
             
             <button onClick={toggleLanguage} className="bg-background text-main px-3 py-2 md:px-4 rounded-md cursor-pointer flex items-center gap-2 border border-main hover:bg-main hover:text-white transition-all">

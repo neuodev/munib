@@ -117,7 +117,7 @@
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "FAQ",
     "questions": [
       {
         "q": "How long is each session?",
@@ -145,10 +145,13 @@
     "message": "Message",
     "send": "Send",
     "phone": "Phone",
-    "address": "Address"
+    "address": "Address",
+    "package": "Package",
+    "selectPackage": "Select Package"
   },
   "video": {
-    "title": "About Our Institution",
-    "description": "Learn about our institution and vision"
+    "title": "About Founder",
+    "description": "Learn about our institution and vision",
+    "infoBtn": "About Ms. Sarah"
   }
 }

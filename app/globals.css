@@ -7,6 +7,10 @@
   --color-gtext: #4B4B4B;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Rubik", sans-serif;
 }
@@ -34,7 +38,7 @@ body {
     border-radius: 10px 17px 10px 0;
     width: fit-content;
     height: 50px;
-    padding: 20px 90px;
+    padding: 30px 90px;
     display: flex;
     top: 5px;
     left: -12px;

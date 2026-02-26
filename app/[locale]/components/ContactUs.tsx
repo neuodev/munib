@@ -6,6 +6,7 @@ import {useTranslations, useLocale} from 'next-intl';
 
 export default function ContactUs() {
   const t = useTranslations('contact');
+  const plans = useTranslations('plans');
   const locale = useLocale();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -73,11 +74,12 @@ export default function ContactUs() {
                     className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
                   />
                 </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-sm font-semibold text-gray-700">
+                <div className="flex flex-col gap-1.5" dir="auto">
+                  <label className="text-sm font-semibold text-gray-700" dir="auto">
                     {t('email')} <span className="text-second">*</span>
                   </label>
                   <input
+                  dir="auto"
                     name="email"
                     type="email"
                     required
@@ -85,7 +87,6 @@ export default function ContactUs() {
                     value={form.email}
                     onChange={handle}
                     className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
-                    style={{ direction: "ltr", textAlign: "right" }}
                   />
                 </div>
               </div>
@@ -93,7 +94,7 @@ export default function ContactUs() {
               {/* Subject */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  الباقة <span className="text-second">*</span>
+                  {t('package')} <span className="text-second">*</span>
                 </label>
                 <select
                   name="subject"
@@ -102,10 +103,10 @@ export default function ContactUs() {
                   onChange={handle}
                   className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 appearance-none"
                 >
-                  <option value="" disabled>اختر الباقة </option>
-                  <option value="support">مُنيب</option>
-                  <option value="billing">السكينة</option>
-                  <option value="teachers">الإتقان</option>
+                  <option value="" disabled>{t('selectPackage')}</option>
+                  <option value="munib">{plans('munib.name')}</option>
+                  <option value="serenity">{plans('serenity.name')}</option>
+                  <option value="mastery">{plans('mastery.name')}</option>
                 </select>
               </div>
 
