@@ -6,14 +6,13 @@
   --color-third: #0DB59D;
   --color-gtext: #4B4B4B;
 }
-*{
-    direction: rtl;
-}
+
 body {
   font-family: "Rubik", sans-serif;
 }
 
-.hero__section > .container__hero{ 
+.hero__section > .container__hero,
+.video__section{ 
   background: url("/assets/Hero.jpg");
   background-size: cover;
   background-position: center;

@@ -1,6 +1,7 @@
 import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
 import Feedback from "./components/Feedback";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Plans from "./components/Plans";
@@ -18,6 +19,7 @@ export default function Home() {
    <Plans/>
    <FAQ/>
    <ContactUs/>
+   <Footer/>
     </>
   );
 }

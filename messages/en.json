@@ -66,5 +66,89 @@
         "Direct communication with teacher"
       ]
     }
+  },
+  "founder": {
+    "title": "About",
+    "name": "Ms. Sara Al-Qassas",
+    "subtitle": "Quran and Qira'at Teacher",
+    "teacher": "Teacher /",
+    "fullName": "Sara Mohamed Jalal Al-Qassas",
+    "nickname": "(Umm Ibrahim)",
+    "description": "Highly specialized in correcting Quran recitation and teaching the ten Qira'at (from Shatibiyyah and Durrah methods).",
+    "hifz": {
+      "title": "Memorization",
+      "items": [
+        "Memorized the entire Quran with Tajweed at age seven.",
+        "Masters similar verses.",
+        "Recited the entire Quran in one sitting multiple times."
+      ]
+    },
+    "tajweed": {
+      "title": "Tajweed",
+      "items": [
+        "Mastered Quran Tajweed in pronunciation and study, certified in: Jazariyyah and Tuhfat Al-Atfal.",
+        "Studied 'Al-Mufassal fi Al-Tajweed' (one of the main books in the field, taught by her mother Professor Azza Abdel Rahim Suleiman).",
+        "Studied 'Tasheel Al-Shatibiyyah' (one of the main books explaining Shatibiyyah, taught by her mother Professor Azza Abdel Rahim Suleiman).",
+        "Conducted several courses in teaching Tajweed for children and adults."
+      ]
+    },
+    "qiraat": {
+      "title": "Qira'at",
+      "items": [
+        "Mastered the ten Qira'at from Shatibiyyah and Durrah methods at age fourteen.",
+        "Certified several teachers in one or more Qira'at."
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        "Fluent in Classical Arabic.",
+        "Fluent in English.",
+        "Can communicate in Spanish."
+      ]
+    },
+    "activities": {
+      "title": "Teacher's Activities",
+      "items": [
+        "Correcting recitation and explaining Tajweed, and giving certification.",
+        "Explaining Shatibiyyah principles and giving certification.",
+        "Teaching the ten Qira'at from Shatibiyyah and Durrah methods."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "How long is each session?",
+        "a": "Each session is 60 minutes long."
+      },
+      {
+        "q": "Can I change my session time?",
+        "a": "Yes, you can coordinate with your teacher to change the time."
+      },
+      {
+        "q": "Do you offer trial sessions?",
+        "a": "Yes, we offer a free trial session."
+      },
+      {
+        "q": "How do I make payments?",
+        "a": "Payments are made monthly via bank transfer or credit card."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We're here to answer your questions and help you",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "video": {
+    "title": "About Our Institution",
+    "description": "Learn about our institution and vision"
   }
 }

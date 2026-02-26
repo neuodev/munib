@@ -1,8 +1,9 @@
 import { Check, ArrowLeft } from "lucide-react";
-import {useTranslations} from 'next-intl';
+import {useTranslations, useLocale} from 'next-intl';
 
 export default function Plans() {
 const t = useTranslations('plans');
+const locale = useLocale();
 
 const plans = [
 {
@@ -30,12 +31,10 @@ return (
          <h1 className="title mb-8 text-center">
             {t('title')}
           </h1>
-    <div dir="rtl" className="max-w-7xl mx-auto py-10">
+    <div dir={locale === 'ar' ? 'rtl' : 'ltr'} className="max-w-7xl mx-auto py-10">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end justify-items-center">
         {plans.map((plan) => (
-            <div
-            key={plan.name}
-            className={`rounded-2xl p-6 w-full max-w-sm flex flex-col transition-all duration-300 hover:-translate-y-1 ${plan.featured ? 'md:-translate-y-5' : ''}`}
+            <div key={plan.name} className={`rounded-2xl p-6 w-full max-w-sm flex flex-col transition-all duration-300 hover:-translate-y-1 ${plan.featured ? 'md:-translate-y-5' : ''} ${locale === 'ar' ? 'text-right' : 'text-left'}`}
             style={
                 plan.featured
                 ? {
@@ -52,7 +51,7 @@ return (
             >
             {/* Title */}
             <h2
-            className="text-3xl font-extrabold text-right mb-1"
+            className={`text-3xl font-extrabold mb-1 ${locale === 'ar' ? 'text-right' : 'text-left'}`}
             style={{ color: plan.featured ? "#fff" : "#0D5466" }}
             >
             {plan.name}
@@ -60,7 +59,7 @@ return (
 
             {/* Price label */}
             <p
-            className="text-sm text-right mb-1"
+            className={`text-sm mb-1 ${locale === 'ar' ? 'text-right' : 'text-left'}`}
             style={{ color: plan.featured ? "rgba(255,255,255,0.75)" : "#888" }}
             >
             {t('perPerson')}
@@ -68,7 +67,7 @@ return (
 
             {/* Price */}
             <p
-            className="text-4xl font-extrabold text-right mb-6"
+            className={`text-4xl font-extrabold mb-6 ${locale === 'ar' ? 'text-right' : 'text-left'}`}
             style={{ color: plan.featured ? "#fff" : "#0D5466" }}
             >
             € {plan.price}
@@ -85,11 +84,11 @@ return (
             />
 
             {/* Features */}
-            <ul dir="rtl" className="flex flex-col gap-3 mb-8 flex-1 justify-start items-start">
+            <ul dir={locale === 'ar' ? 'rtl' : 'ltr'} className="flex flex-col gap-3 mb-8 flex-1 justify-start items-start">
             {plan.features.map((feature) => (
                 <li
                 key={feature}
-                className="flex flex-row-reverse items-center gap-3 text-right text-[15px] font-medium"
+                className={`flex ${locale === 'ar' ? 'flex-row-reverse' : 'flex-row'} items-center gap-3 ${locale === 'ar' ? 'text-right' : 'text-left'} text-[15px] font-medium`}
                 style={{ color: plan.featured ? "#fff" : "#333" }}
                 >
                     <span>{feature}</span>

@@ -7,7 +7,7 @@ const Hero = () => {
     
     return (
         <section className="hero__section bg-main">
-            <div className="container__hero min-h-[calc(100vh-100px)] w-full bg-main flex justify-center items-center flex-col px-4 py-8">
+            <div className="container__hero min-h-screen w-full bg-main flex justify-center items-center flex-col px-4 py-8 pt-20">
                 <div className="flex flex-col justify-center items-center scale-80 md:scale-100 lg:scale-120 xl:scale-140">
                 <h1 className="font-bold text-white text-center text-5xl  max-w-110 leading-tight md:leading-relaxed">
                     {t('title')} <span className="hero__highlight">{t('highlight')}</span>

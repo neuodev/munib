@@ -17,9 +17,9 @@ const Navbar = () => {
     };
 
     return (
-       <nav className="nav__bar bg-background shadow-xl flex justify-center items-center py-4">
+       <nav className="nav__bar bg-background shadow-xl flex justify-center items-center py-4 fixed w-full z-30 ">
         <div className="container mx-auto flex justify-between items-center px-4">
-            <Image src="/assets/Munib_BG_White.svg" alt="Logo" width={150} height={150} className="md:w-[200px]" />
+            <Image src="/assets/Munib_BG_White.svg" alt="Logo" width={150} height={150} className="md:w-50" />
             
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-main">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

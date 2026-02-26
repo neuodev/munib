@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const VideoSection = () => {
     return (
-        <section className="bg-main">
+        <section className="bg-main video__section">
                 <h1 className="title__white text-white pt-10 text-lg mb-1">عن  <span className="text-third">المؤسسة</span></h1>
                 <div className="container mx-auto p-2 max-w-7xl ">
                     <div className="video__box px-10 py-2">
