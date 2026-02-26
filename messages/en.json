@@ -14,5 +14,57 @@
     "description": "Join thousands of students who started their journey with us. Specialized teachers, innovative curricula, and personal follow-up",
     "contactBtn": "Contact Us",
     "plansBtn": "Browse Plans"
+  },
+  "whyus": {
+    "teachers": "Experienced Teachers",
+    "teachersDesc": "Elite teachers with experience dealing with different ages and levels.",
+    "curriculum": "Innovative Curriculum",
+    "curriculumDesc": "We use interactive and creative methods to facilitate memorization and review, away from traditional methods",
+    "flexibility": "Flexible Schedule",
+    "flexibilityDesc": "Choose the times that suit you, morning or evening, learn from the comfort of your home.",
+    "followup": "Regular Follow-up",
+    "followupDesc": "Each student gets a personalized plan and continuous follow-up from their teacher to ensure the best results."
+  },
+  "feedback": {
+    "title": "Student Reviews",
+    "rating": "Rating"
+  },
+  "plans": {
+    "title": "Plans & Pricing",
+    "perPerson": "Per Person",
+    "choosePlan": "Choose Plan",
+    "moneyBack": "Money-back guarantee anytime",
+    "mastery": {
+      "name": "Mastery Package",
+      "features": [
+        "12 sessions per month (3 weekly)",
+        "Specialized and certified teachers",
+        "Personalized follow-up plan",
+        "Weekly performance report",
+        "Direct communication with teacher",
+        "Video recordings of all sessions"
+      ]
+    },
+    "munib": {
+      "name": "Munib Package",
+      "features": [
+        "8 sessions per month (2 weekly)",
+        "Specialized and certified teachers",
+        "Personalized follow-up plan",
+        "Bi-weekly performance report",
+        "Direct communication with teacher",
+        "Video recordings of all sessions"
+      ]
+    },
+    "serenity": {
+      "name": "Serenity Package",
+      "features": [
+        "4 sessions per month (1 weekly)",
+        "Specialized and certified teachers",
+        "Personalized follow-up plan",
+        "Monthly performance report",
+        "Direct communication with teacher"
+      ]
+    }
   }
 }

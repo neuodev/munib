@@ -1,51 +1,34 @@
 import { Check, ArrowLeft } from "lucide-react";
+import {useTranslations} from 'next-intl';
+
+export default function Plans() {
+const t = useTranslations('plans');
 
 const plans = [
 {
-    name: "باقة الإتقان",
+    name: t('mastery.name'),
     price: "85",
     featured: false,
-    features: [
-    "12 حصص في الشهر (3 أسبوعياً)",
-    "معلمون متخصصون ومعتمدون",
-    "خطة متابعة مخصصة",
-    "تقرير أداء أسبوعي",
-    "تواصل مباشر مع المعلم",
-    "تسجيلات فيديو لجميع الحصص",
-    ],
+    features: t.raw('mastery.features') as string[],
 },
 {
-    name: "باقة مُنيب",
+    name: t('munib.name'),
     price: "60",
     featured: true,
-    features: [
-    "8 حصص في الشهر (حصتان أسبوعياً)",
-    "معلمون متخصصون ومعتمدون",
-    "خطة متابعة مخصصة",
-    "تقرير أداء كل أسبوعين",
-    "تواصل مباشر مع المعلم",
-    "تسجيلات فيديو لجميع الحصص",
-    ],
+    features: t.raw('munib.features') as string[],
 },
 {
-    name: "باقة السكينة",
+    name: t('serenity.name'),
     price: "45",
     featured: false,
-    features: [
-    "4 حصص في الشهر (حصة أسبوعياً)",
-    "معلمون متخصصون ومعتمدون",
-    "خطة متابعة مخصصة",
-    "تقرير أداء شهري",
-    "تواصل مباشر مع المعلم",
-    ],
+    features: t.raw('serenity.features') as string[],
 },
 ];
 
-export default function Plans() {
 return (
     <section className="py-16 px-4">
          <h1 className="title mb-8 text-center">
-            الخطط والأسعار
+            {t('title')}
           </h1>
     <div dir="rtl" className="max-w-7xl mx-auto py-10">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end justify-items-center">
@@ -80,7 +63,7 @@ return (
             className="text-sm text-right mb-1"
             style={{ color: plan.featured ? "rgba(255,255,255,0.75)" : "#888" }}
             >
-            للشخص
+            {t('perPerson')}
             </p>
 
             {/* Price */}
@@ -143,11 +126,11 @@ return (
                 }
             }
             >
-            أختر الخطة
+            {t('choosePlan')}
             <ArrowLeft size={16} strokeWidth={2.5} />
             </button>
             <p className="text-center pt-2 font-bold text-sm">
-                        يوجد في أي وقت استرجاع المال</p>
+                        {t('moneyBack')}</p>
         </div>
         ))}
     </div>

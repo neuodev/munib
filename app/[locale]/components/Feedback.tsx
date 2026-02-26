@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
+import {useTranslations} from 'next-intl';
 
 const reviews = [
   {
@@ -63,6 +64,7 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 function ReviewCard({ name, location, rating, text, isRTL }: (typeof reviews)[0]) {
+  const t = useTranslations('feedback');
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-2 hover:shadow-md transition-shadow duration-300 h-fit">
       <div className="flex items-center justify-between mb-1">
@@ -78,7 +80,7 @@ function ReviewCard({ name, location, rating, text, isRTL }: (typeof reviews)[0]
       <p className={`text-gray-600 text-sm leading-relaxed grow ${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>{text}</p>
 
       <div className="text-center flex justify-center flex-col items-center mt-auto">
-        <p className="text-xs text-gray-400 mt-2" dir="rtl">التقييم</p>
+        <p className="text-xs text-gray-400 mt-2" dir="rtl">{t('rating')}</p>
         <StarRating rating={rating} />
       </div>
     </div>
@@ -86,12 +88,14 @@ function ReviewCard({ name, location, rating, text, isRTL }: (typeof reviews)[0]
 }
 
 export default function TestimonialsSection() {
+  const t = useTranslations('feedback');
+  
   return (
     <section className="bg-gray-50 py-16 px-4" dir="rtl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="title">
-            آراء طلابنا
+            {t('title')}
           </h1>
         </div>
 

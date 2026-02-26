@@ -1,3 +1,5 @@
+import ContactUs from "./components/ContactUs";
+import FAQ from "./components/FAQ";
 import Feedback from "./components/Feedback";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -14,6 +16,8 @@ export default function Home() {
    <VideoSection/>
    <Feedback/>
    <Plans/>
+   <FAQ/>
+   <ContactUs/>
     </>
   );
 }
