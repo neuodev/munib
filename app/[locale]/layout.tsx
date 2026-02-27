@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const messages = await getMessages() as Record<string, Record<string, string>>;
 
-  const title = messages.hero?.title ? `${messages.hero.title} | Munib` : locale === 'ar' ? 'مُنيب' : 'Munib';
-  const description = messages.hero?.description || (locale === 'ar' ? 'اجعل القرآن ربيع قلبك' : 'Make the Quran the spring of your heart');
+  const title =  locale === 'ar' ? 'مُنيب' : 'Munib';
+  const description = messages.hero?.description || (locale === 'ar' ? ' اجعل القرآن ربيع قلبك' : 'Make the Quran the spring of your heart');
   const imageUrl = "https://i.suar.me/e94YG/l";
 
   return {
-    title,
-    description,
+    title:title,
+    description:description,
     keywords: ['Quran', 'تعليم القرآن', 'Munib', 'online Quran classes', 'قراءة القرآن','مُنيب'],
     openGraph: {
       title: "منصة مُنيب",
@@ -40,8 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title:title,
+      description:description,
       images: [imageUrl],
     },
     alternates: {
