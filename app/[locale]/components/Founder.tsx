@@ -53,7 +53,7 @@ export default function Founder() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6">
         <div className='text-center max-w-170 mx-auto'>
             <span className='text-second text-2xl font-black sm:ms-[-350]'>{t('teacher')} </span>
-            <h1 className='text-main text-4xl font-black'> {t('fullName')} <span className='text-sm'>{t('nickname')}</span> </h1>
+            <h1 className='text-main text-4xl font-black'> {t('fullName')} </h1>
             <p className='text-md text-gtext mt-2'>{t('description')}</p>
         </div>
         {sections.map((section) => (

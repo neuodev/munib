@@ -6,6 +6,10 @@
   --color-third: #0DB59D;
   --color-gtext: #4B4B4B;
 }
+::selection{
+    background-color: #0f536540;
+    color: #0f5365;
+}
 
 html {
   scroll-behavior: smooth;
@@ -49,15 +53,18 @@ body {
 .title__white{
   color:white;
   margin: 20px auto;
+    font-size: xx-large;
 }
 .title{
   color:var(--color-main);
     margin: 50px auto;
+        font-size: xxx-large;
+
+
 
 }
 .title,
 .title__white{
-  font-size: xxx-large;
   font-weight: bold;
   text-align: center;
   position: relative;

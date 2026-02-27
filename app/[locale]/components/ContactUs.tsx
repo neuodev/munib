@@ -71,7 +71,7 @@ export default function ContactUs() {
                     placeholder={t('name')}
                     value={form.name}
                     onChange={handle}
-                    className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
+                    className="input-field bg-[##0eb69d08] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5" dir="auto">
@@ -86,7 +86,7 @@ export default function ContactUs() {
                     placeholder="example@email.com"
                     value={form.email}
                     onChange={handle}
-                    className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
+                    className="input-field bg-[##0eb69d08] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400"
                   />
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function ContactUs() {
                   required
                   value={form.subject}
                   onChange={handle}
-                  className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 appearance-none"
+                  className="input-field bg-[##0eb69d08] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 appearance-none"
                 >
                   <option value="" disabled>{t('selectPackage')}</option>
                   <option value="munib">{plans('munib.name')}</option>
@@ -122,7 +122,7 @@ export default function ContactUs() {
                   placeholder={t('message')}
                   value={form.message}
                   onChange={handle}
-                  className="input-field bg-[#f7f6f2] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400 resize-none"
+                  className="input-field bg-[##0eb69d08] rounded-xl border border-gray-200 px-4 py-3 text-sm text-gray-800 placeholder-gray-400 resize-none"
                 />
               </div>
 

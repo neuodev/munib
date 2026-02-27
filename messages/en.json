@@ -73,7 +73,6 @@
     "subtitle": "Quran and Qira'at Teacher",
     "teacher": "Teacher /",
     "fullName": "Sara Mohamed Jalal Al-Qassas",
-    "nickname": "(Umm Ibrahim)",
     "description": "Highly specialized in correcting Quran recitation and teaching the ten Qira'at (from Shatibiyyah and Durrah methods).",
     "hifz": {
       "title": "Memorization",
@@ -120,20 +119,27 @@
     "title": "FAQ",
     "questions": [
       {
-        "q": "How long is each session?",
-        "a": "Each session is 60 minutes long."
+        "q": "Who are the teachers?",
+        "a": "All our female teachers are specialists and highly experienced in teaching the Holy Quran, Tajweed and recitations."      },
+      {
+        "q": "Can I try the service before subscribing?",
+        "a": "Yes, of course! We offer a completely free trial session lasting 20 minutes. Through it, you can meet the teacher, experience our teaching methodology, and determine your level, before deciding to subscribe."
       },
       {
-        "q": "Can I change my session time?",
-        "a": "Yes, you can coordinate with your teacher to change the time."
+        "q": "How is my level determined and the appropriate curriculum chosen for me?",
+        "a": "We conduct a short placement test when you register, and then the teacher evaluates your level during the first session to choose the curriculum best suited to your goals."
       },
       {
-        "q": "Do you offer trial sessions?",
-        "a": "Yes, we offer a free trial session."
+        "q": "What if I need to cancel or reschedule a session?",
+        "a": "You can easily cancel or reschedule your session from your control panel, at least 12 hours before the session time, without any fees."
       },
       {
-        "q": "How do I make payments?",
-        "a": "Payments are made monthly via bank transfer or credit card."
+        "q": "What are the available payment methods?",
+        "a": "We accept credit cards (Visa, Mastercard), payment via Apple Pay and Google Pay, in addition to bank transfer."
+      },
+      {
+        "q": "Can I change the package after subscription?",
+        "a": "Yes, you can upgrade or downgrade your package at any time, and the difference will be calculated proportionally."
       }
     ]
   },
