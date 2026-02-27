@@ -1,10 +1,11 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footer = () => {
     const locale = useLocale();
+    const t = useTranslations('footer');
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -13,20 +14,28 @@ const Footer = () => {
         }
     };
 
+    // مصفوفة العناصر التي تنتقل لسكرول في نفس الصفحة
     const navItems = [
-        { label: 'الرئيسية', id: 'home' },
-        { label: 'لماذا نحن', id: 'why' },
-        { label: 'الآراء', id: 'reviews' },
-        { label: 'الخطط', id: 'plans' },
-        { label: 'الأسئلة الشائعة', id: 'faq' },
+        { label: t('home'), id: 'home' },
+        { label: t('why'), id: 'why' },
+        { label: t('reviews'), id: 'reviews' },
+        { label: t('plans'), id: 'plans' },
+        { label: t('faq'), id: 'faq' },
     ];
 
     return (
         <footer className="w-full bg-main flex flex-col justify-center items-center pt-9">
-            <Link href={"/"}>
-            <Image src={"/assets/Munib_BG_Dark.svg"} alt="Logo in footer" height={300} width={300} className="mb-10" />
+            <Link href={`/${locale}`}>
+                <Image 
+                    src={"/assets/Munib_BG_Dark.svg"} 
+                    alt="Logo in footer" 
+                    height={300} 
+                    width={300} 
+                    className="mb-10" 
+                />
             </Link>
-            <ul className="flex flex-wrap text-white gap-4 pb-10 justify-center">
+            
+            <ul className="flex flex-wrap text-white gap-4 pb-10 justify-center px-4">
                 {navItems.map((item) => (
                     <li key={item.id}>
                         <button
@@ -37,16 +46,23 @@ const Footer = () => {
                         </button>
                     </li>
                 ))}
+                
+                {/* جزء المؤسسة كـ Link لصفحة منفصلة */}
                 <li>
                     <Link
                         href={`/${locale}/founder`}
                         className="cursor-pointer hover:text-third transition-colors font-medium"
                     >
-                        عن المؤسسة
+                        {t('founder')}
                     </Link>
                 </li>
             </ul>
-            <Link href="https://mersal.top/" className="block w-fit bg-third py-7 px-10 rounded-t-2xl text-white font-bold hover:bg-white hover:text-main transition-all">
+
+            <Link 
+                href="https://mersal.top/" 
+                target="_blank" 
+                className="block w-fit bg-third py-7 px-10 rounded-t-2xl text-white font-bold hover:bg-white hover:text-main transition-all"
+            >
                 Designed & Developed by Mersal
             </Link>
         </footer>

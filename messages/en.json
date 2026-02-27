@@ -159,5 +159,14 @@
     "title": "About Founder",
     "description": "Learn about our institution and vision",
     "infoBtn": "About Ms. Sarah"
+  },
+  "footer": {
+   "home": "Home",
+    "why": "Why Us",
+    "reviews": "Reviews",
+    "plans": "Plans",
+    "faq": "FAQ",
+    "contact": "Contact Us",
+    "founder": "Founder"
   }
 }
